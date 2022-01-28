@@ -6,8 +6,8 @@ Una parola da censurare viene passata dall’utente tramite parametro GET.
 Stampare di nuovo il paragrafo e la sua lunghezza, dopo aver sostituito con tre asterischi (***) tutte le occorrenze della parola da censurare. */
 
 $str = 'lorem ipsum dolor sit';
-$stringUser = $_GET['name'];
-$stringCensored = str_replace($stringUser, '***', $stringUser);
+$stringUser = $_GET['word'];
+$stringCensored = str_replace($stringUser, '***', $str);
 ?>
 
 <!DOCTYPE html>
@@ -23,7 +23,7 @@ $stringCensored = str_replace($stringUser, '***', $stringUser);
     <p>Lunghezza paragrafo: <?php echo strlen($str); ?></p>
     <h3>Parola da censurare: <?php echo $stringUser; ?></h3>
     <h3>Lunghezza parola da censurare: <?php echo strlen($stringCensored); ?></h3>
-    <h3>Parola censurata: <?php echo $stringCensored ?></h3>
+    <h3>Nuovo paragrafo: <?php echo $stringCensored ?></h3>
   
     
 </body>
